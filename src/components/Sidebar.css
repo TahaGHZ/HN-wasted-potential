@@ -1,0 +1,120 @@
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  background: linear-gradient(180deg, #1a1a2e 0%, #0f0f1e 100%);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-header {
+  margin-bottom: 30px;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-logo {
+  height: 50px;
+  width: auto;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+}
+
+.sidebar-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.sidebar-subtitle {
+  font-size: 0.9rem;
+  color: #888;
+  font-weight: 300;
+}
+
+.sidebar-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #d0d0d0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.nav-button.active {
+  background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+  border-color: #4a90e2;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+.nav-icon {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-text {
+  font-weight: 500;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    border-right: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .sidebar-nav {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  
+  .nav-button {
+    min-width: 120px;
+  }
+}
+

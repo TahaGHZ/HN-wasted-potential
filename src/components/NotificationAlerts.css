@@ -1,0 +1,139 @@
+.notification-alerts-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  max-width: 400px;
+}
+
+.alerts-panel {
+  background: rgba(26, 26, 46, 0.95);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.alerts-title {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.alert-item {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border-left: 4px solid;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.alert-item.low {
+  border-left-color: #ffd43b;
+}
+
+.alert-item.medium {
+  border-left-color: #ffa94d;
+}
+
+.alert-item.high {
+  border-left-color: #ff6b6b;
+}
+
+.alert-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.alert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.alert-severity-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.alert-item.low .alert-severity-badge {
+  background: rgba(255, 212, 59, 0.2);
+  color: #ffd43b;
+}
+
+.alert-item.medium .alert-severity-badge {
+  background: rgba(255, 169, 77, 0.2);
+  color: #ffa94d;
+}
+
+.alert-item.high .alert-severity-badge {
+  background: rgba(255, 107, 107, 0.2);
+  color: #ff6b6b;
+}
+
+.dismiss-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #ffffff;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.dismiss-button:hover {
+  background: rgba(255, 107, 107, 0.3);
+  transform: scale(1.1);
+}
+
+.alert-name {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.alert-reason {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.no-alerts {
+  text-align: center;
+  color: #888;
+  padding: 20px;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .notification-alerts-container {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
+}
+
